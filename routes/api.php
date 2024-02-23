@@ -9,6 +9,13 @@ use App\Http\Controllers\Api\TweetController;
 // 🔽 追加
 use App\Http\Controllers\Api\TweetLikeController;
 
+//計算機能
+use App\Http\Controllers\MultiplyController;
+
+// 結婚式見積
+use App\Http\Controllers\WeddingEstimateController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -39,3 +46,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/tweets/{tweet}/like', [TweetLikeController::class, 'store']);
     Route::delete('/tweets/{tweet}/like', [TweetLikeController::class, 'destroy']);
 });
+
+
+//計算機能
+Route::post('/multiply', [MultiplyController::class, 'store']);
+
+//結婚式見積
+Route::post('/wedding-estimate', [WeddingEstimateController::class, 'store']);
