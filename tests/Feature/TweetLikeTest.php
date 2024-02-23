@@ -20,7 +20,7 @@ it('allows a user to like a tweet', function () {
     ]);
 });
 
-// dislikeのテスト
+// dislikeのテストを行う
 it('allows a user to dislike a tweet', function () {
     $user = User::factory()->create();
     $tweet = Tweet::factory()->create();
